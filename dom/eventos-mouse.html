@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color :red;
+            width: 100px;
+            height: 100px;
+        }
+        .blue{
+            background-color: blue;
+            width: 120px;
+            height:120px
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos del Mouse</h1>
+    <ul>
+        <li><strong>click</strong> cuando hacemos click.</li>
+        <li><strong>dblclick</strong> cuando hacemos doble click</li>
+        <li><strong>mouseenter</strong> cuando entramos a la zona del evento</li>
+        <li><strong>mouseeleave</strong> cuando salimos de la zona del evento</li>
+        <li><strong>mousedown</strong>cuando pulsamos y no soltamos el btn izquierdo</li>
+        <li><strong>mouseup</strong>cuando soltamos el btn izquierdo</li>
+        <li><strong>mousemove</strong> cuando movemos el mouse</li>
+    </ul>
+
+        <div id="elemento" class="red"></div>
+
+    <script>
+        const div = document.querySelector('#elemento');
+        div.addEventListener('mouseover', dispararFuncion);
+
+        function dispararFuncion(){
+            div.classList.replace('red','blue')
+            console.log('Se disparo la funcion.')
+        }
+
+        div.addEventListener('mouseleave', () => {
+            div.classList.replace('blue','blue')
+        })
+    </script>
+</body>
+</html>

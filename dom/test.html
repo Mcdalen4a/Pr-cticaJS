@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1 class="title" id="title">Metodos para trabajar con clases</h1>
+    <h2>ClassList</h2>
+    <section id="section">
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint architecto laborum rerum inventore, amet deleniti nemo facilis numquam perspiciatis dignissimos tenetur eligendi maiores. Exercitationem blanditiis quasi illum accusamus corporis esse?</p>
+    </section>
+
+    <script>
+        /*
+        e.classList.add('clase'); //AGREGA
+        e.classList.remove('clase')//elimina
+        e.classList.toggle('clase');
+        e.classList.contains('clase')
+        e.classList.replace('clase')
+        */
+
+        const h1 = document.querySelector('#title');
+        console.log(h1);
+
+        const bol = h1.classList.contains('clase');
+        console.log(bol)
+
+        h1.classList.add('especial', 'xxx')
+        h1.classList.remove('title', 'xxx')
+        h1.classList.toggle('title')
+        h1.classList.replace('especial','xxxx')
+
+        h1.className.add = ('especial')
+    </script>
+</body>
+</html>

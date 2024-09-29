@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Titulo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita accusantium exercitationem, quaerat quas impedit enim saepe mollitia dolorem. Ducimus, officiis? Non facere minima maxime earum, soluta unde nemo assumenda ipsam.</p>
+    <button id="btn">Mostrar cambios</button>
+    <img id = "img" src="https://images.pexels.com/photos/15927820/pexels-photo-15927820/free-photo-of-vacaciones-de-tet.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+     alt="flores" width="400px">
+
+    <script>
+        const btn = document.querySelector('#btn');
+        console.log(btn)
+        btn.addEventListener('click', mostrar);
+
+
+        const img = document.querySelector('img')
+        console.log(img.getAttribute('alt'))
+        //img.setAttribute('width', '400px')
+        img.setAttribute('height', '600px');
+
+        function mostrar(){
+
+        document.querySelector('#img').style.width = '400px';
+        document.querySelector('#img').className = 'imagen';
+        document.querySelector('#title').className = 'titulo';
+        document.querySelector('#title').style.color = 'red';
+        document.querySelector('#title').style.border = 'dotted red 3px';
+        document.querySelector('#title').style.padding = '3px';
+        document.querySelector('#title').style.background = 'yellow';
+        }
+    
+        </script>
+</body>
+</html>
